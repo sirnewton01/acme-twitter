@@ -14,7 +14,8 @@ const tweetTmpl = `__________________________
 {{ .CreatedAtTime.Local.Format "Mon Jan 2 15:04:05" }} (Tuser {{.User.ScreenName}}) <https://twitter.com/{{.User.ScreenName}}/status/{{.IDStr}}>
 
 {{ .FullText }}
-
+{{ if .Entities }}{{ range .Entities.Urls }}* <{{ .ExpandedURL }}>
+{{ end }}{{ end }}
 (Trepl {{ .IDStr }} '@{{.User.ScreenName}} '):{{ .ReplyCount }} (Trt {{ .IDStr }}):{{ .RetweetCount }} (Tfav {{ .IDStr }}):{{ .FavoriteCount }}
 
 `
