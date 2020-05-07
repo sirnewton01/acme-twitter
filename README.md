@@ -66,9 +66,11 @@ Note that there are three blocks at the end of each tweet partially in round bra
 
 There is another Tuser command that will bring up details about a particular user with further commands to see their timeline, follow, etc. though this is TBD.
 
+To make a tweet use the Tweet command with your update as the first parameter (eg. ```Tweet 'Hello, World'```).
+
 # Setup
 
-Setup involves installing Go 1.13 or greater and running ```go install github.com/sirnewton01/acme-twitter```. Place the acme-twitter binary somewhere on your PATH where acme can run it. In that same location you can create symbolic links for Ttl, Trt, Trepl, Tfav, Tuser pointing to the same acme-twitter executable. The acme-twitter command observes the name that it was invoked to decide which function to run.
+Setup involves installing Go 1.13 or greater and running ```go install github.com/sirnewton01/acme-twitter```. Place the acme-twitter binary somewhere on your PATH where acme can run it. In that same location you can create symbolic links for Ttl, Trt, Trepl, Tfav, Tuser and Tweet pointing to the same acme-twitter executable. The acme-twitter command observes the name that it was invoked to decide which function to run.
 
 # Authentication
 

@@ -71,6 +71,8 @@ func main() {
         	favorite(client)
 	} else if os.Args[0] == "Trepl" {
         	reply(client)
+	} else if os.Args[0] == "Tweet" {
+                tweet(client)
 	} else {
 		timeline(client)
 	}
